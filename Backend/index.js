@@ -16,7 +16,10 @@ const AuthRoutes = require("./src/controllers/auth.controller")
 
 //middlewares 
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    origin: "https://coba-dh-frontny.vercel.app",
+    methods: "POST", "GET"
+))
 
 
 app.get("/", (req, resp) => {
